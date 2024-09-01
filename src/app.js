@@ -2,6 +2,14 @@ const express = require('express');
 const morgan = require('morgan');
 const rateLimit = require('express-rate-limit');
 const bodyParser = require('body-parser');
+const cors = require('cors');
+const corsConfig = {
+    origin: "*",
+    credential: true,
+    methods: ["GET", "POST", "PUT", "DELETE"],
+}
+app.options("", cors(corsConfig));
+app.use(cors(corsConfig));
 const contactRouter = require('./routers/ContactRouter');
 const complaintRouter = require('./routers/ComplaintSubmissionRouter');
 const sampleCollectionRouter = require('./routers/SampleCollectionRouter');
