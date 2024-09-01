@@ -2,18 +2,18 @@ const mongoose = require('mongoose');
 const { MongodbURL } = require('../secret');
 const connectDB = async (options) => {
     try {
-        await mongoose.connect(MongodbURL, options);
-        console.log("connection to db is successful");
-        mongoose.connection.on('error', (error) => {
-            console.error('DB connection error: ', error);
-
-        } );
-    }
-    catch (error){
-        console.error("couldn't connect to db: ", error.toString());
         
-
-    }
+        if (mongoose.connection.readyState >= 1) return;
+    
+        await mongoose.connect(process.env.MONGO_URI, {
+          useNewUrlParser: true,
+          useUnifiedTopology: true,
+        });
+    
+        console.log('MongoDB connected');
+      } catch (error) {
+        console.error('MongoDB connection error:', error);
+      }
 };
 
 
