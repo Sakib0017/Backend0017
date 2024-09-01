@@ -2,14 +2,14 @@
     "version": 2,
     "builds": [
       {
-        "src": "src/routers/ContactRouter.js",
+        "src": "src/server.js",
         "use": "@vercel/node"
       }
     ],
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "src/routers/ContactRouter.js"
+        "dest": "src/server.js"
       }
     ]
   }
