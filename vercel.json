@@ -10,7 +10,18 @@
       {
         "src": "/(.*)",
         "dest": "src/server.js"
-        
+      },
+      {
+        "src": "/api/messages",
+        "dest": "/"
+      },
+      {
+        "src": "/api/complaints",
+        "dest": "/"
+      },
+      {
+        "src": "/api/sample-collections",
+        "dest": "/"
       }
     ]
   }
