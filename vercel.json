@@ -13,14 +13,10 @@
       },
       {
         "src": "src/app.js",
-        "dest": "/"
+        "dest": "/",
+        "methods": ["POST", "GET"]
       }
-    ],
-    "functions": {
-    "api/index.js": {
-      "maxDuration": 30
-    }
-  }
+    ]
 
     
   }

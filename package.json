@@ -9,14 +9,7 @@
     "dev": "nodemon ./src/server.js"
   },
   "keywords": [
-    "Ecommerce",
-    "farmer",
-    "livestock",
-    "vagitable",
-    "crops",
-    "startup",
-    "BtoB",
-    "BtoC"
+
   ],
   "author": "MdMirzaShihab",
   "license": "ISC",
