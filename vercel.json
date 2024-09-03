@@ -15,5 +15,12 @@
         "src": "/api/(.*)",
         "dest": "src/server.js"
       }
-    ]
+    ],
+    "functions" : {
+      "api/app.js": {
+      "maxDuretion":30
+    }
+    }
+
+    
   }
