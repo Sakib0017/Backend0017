@@ -4,24 +4,24 @@
       {
         "src": "src/server.js",
         "use": "@vercel/node"
+      },
+      { 
+       "src": "api/routers/ComplaintSubmissionRouter.js",
+       "use": "@vercel/node" 
+      },
+      { 
+       "src": "api/routers/ContactRouter.js",
+       "use": "@vercel/node" 
+      },
+      { 
+       "src": "api/routers/SampleCollectionRouter.js",
+       "use": "@vercel/node" 
       }
     ],
     "routes": [
       {
         "src": "/(.*)",
         "dest": "src/server.js"
-      },
-      {
-        "src": "src/app.js",
-        "dest": "/",
-        "methods": ["POST", "GET"]
       }
-    ],
-    "functions": {
-    "api/routers/ComplaintSubmissionRouter.js": {
-      "maxDuration": 10
-    }
-  }
-
-    
-  }
+    ]
+   }
