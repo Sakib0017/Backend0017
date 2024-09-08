@@ -21,7 +21,11 @@
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "api/routers/ComplaintSubmissionRouter.js"
+        "dest": "src/server.js"
+      },
+      { 
+        "src": "/api/(.*)", 
+        "dest": "/api/$1.js" 
       }
     ]
    }
