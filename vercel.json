@@ -25,7 +25,7 @@
       },
       { 
         "src": "src/api/(.*)", 
-        "dest": "src/api/routers/SampleCollectionRouter.js" 
+        "dest": "src/api/sample-collections" 
       }
     ]
    }
