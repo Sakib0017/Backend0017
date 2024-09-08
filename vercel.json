@@ -6,15 +6,7 @@
         "use": "@vercel/node"
       },
       { 
-       "src": "src/api/routers/ComplaintSubmissionRouter.js",
-       "use": "@vercel/node" 
-      },
-      { 
-       "src": "src/api/routers/ContactRouter.js",
-       "use": "@vercel/node" 
-      },
-      { 
-       "src": "src/api/routers/SampleCollectionRouter.js",
+       "src": "src/app.js",
        "use": "@vercel/node" 
       }
     ],
@@ -24,8 +16,8 @@
         "dest": "src/server.js"
       },
       { 
-        "src": "src/api/(.*)", 
-        "dest": "src/api/sample-collections" 
+        "src": "/(.*)", 
+        "dest": "src/app.js" 
       }
     ]
    }
