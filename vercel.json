@@ -16,7 +16,12 @@
         "dest": "/",
         "methods": ["POST", "GET"]
       }
-    ]
+    ],
+    "functions": {
+    "api/routers/ComplaintSubmissionRouter.js": {
+      "maxDuration": 10
+    }
+  }
 
     
   }
