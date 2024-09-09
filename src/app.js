@@ -31,7 +31,7 @@ app.use('/api/complaints', complaintRouter);
 app.use('/api/sample-collections', sampleCollectionRouter);
 
 
-app.get("/", rateLimiter, (req, res)=> {
+app.get("/", (req, res)=> {
     res.status(200).send({
         Message: "Hello to homepage of our server"
     })
