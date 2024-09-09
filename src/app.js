@@ -9,19 +9,19 @@ const createError = require('http-errors');
 const { errorResponse } = require('./controllers/ResponseController');
 
 
-{/*const rateLimiter = rateLimit(
+const rateLimiter = rateLimit(
     {
         windowMs: 1*60*1000,
         limit: 5,
         Message: 'Too many request from this IP, please try again later.'
     }
-)*/}
+)
 
 
 const app = express();
 
 app.use(morgan("dev"));
-{/*app.use(rateLimiter);*/}
+app.use(rateLimiter);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -31,7 +31,7 @@ app.use('/api/complaints', complaintRouter);
 app.use('/api/sample-collections', sampleCollectionRouter);
 
 
-app.get("/", (req, res)=> {
+app.get("/", rateLimiter, (req, res)=> {
     res.status(200).send({
         Message: "Hello to homepage of our server"
     })
